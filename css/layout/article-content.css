@@ -1,5 +1,6 @@
 .article-content-container .article-title {
   color: var(--second-text-color);
+  font-family: 'Noto Serif TC', serif;
   font-weight: 600;
   font-size: 1.6rem;
 keep-tablet()
@@ -64,7 +65,8 @@ keep-tablet()
 }
 .article-content-container .article-content {
   font-family: 'Noto Serif TC', serif;
-  font-size: 1.15em;
+  font-size: 1.2em;
+  font-weight: 500;
   margin-top: $component-spacing-value;
   padding-bottom: 10px;
   word-wrap: break-word;
