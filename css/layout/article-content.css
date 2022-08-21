@@ -63,6 +63,8 @@ keep-mobile()
 keep-tablet()
 }
 .article-content-container .article-content {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.15em;
   margin-top: $component-spacing-value;
   padding-bottom: 10px;
   word-wrap: break-word;
