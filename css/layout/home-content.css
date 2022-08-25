@@ -24,6 +24,7 @@ keep-mobile()
   margin: 0;
 }
 .home-content-container .home-article-list .home-article-item .home-article-content {
+  line-height: 2;
   word-wrap: break-word;
   text-align: justify;
   margin: 20px 0;
