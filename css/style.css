@@ -2513,6 +2513,12 @@ pre .javascript .function {
   border-bottom: 1px solid var(--border-color);
   color: var(--default-text-color);
 }
+.article-content-container .article-content .paper {
+  font-family: Optima-Regular, Optima, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, Noto Serif TC;
+  font-size: xx-small;
+  line-height: 1;
+  color: #999;
+}
 .article-content-container .post-tags-box {
   display: none;
   margin-top: 1.6rem;

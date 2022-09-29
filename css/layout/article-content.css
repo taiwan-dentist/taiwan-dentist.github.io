@@ -73,6 +73,12 @@ keep-tablet()
   border-bottom: 1px solid var(--border-color);
   color: var(--default-text-color);
 }
+.article-content-container .article-content .paper {
+  font-family: $default-font-family;
+  font-size: xx-small;
+  line-height: 1;
+  color: #999;
+}
 .article-content-container .post-tags-box {
   display: none;
   margin-top: 1.6rem;
