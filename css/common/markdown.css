@@ -91,6 +91,8 @@ keep-tablet()
 .markdown-body h2 {
   font-size: 1.7rem;
   font-weight: 600;
+  background-color: #92acc3;
+  border-left: 10px solid #d3d3d3;
 keep-tablet()
 }
 .markdown-body h3 {
