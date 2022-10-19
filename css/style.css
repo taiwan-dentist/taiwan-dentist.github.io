@@ -459,8 +459,10 @@ button {
 .markdown-body h2 {
   font-size: 1.7rem;
   font-weight: 600;
-  background-color: #92acc3;
-  border-left: 10px solid #d3d3d3;
+  background-color: #f5deb3;
+  border-left: 8px solid #deb887;
+  border-radius: 8px;
+  padding: 0.3em 1em;
 }
 @media (max-width: 780px) {
   .markdown-body h2 {
@@ -470,6 +472,10 @@ button {
 .markdown-body h3 {
   font-size: 1.6rem;
   font-weight: 550;
+  background-color: #f0ffff;
+  border-left: 13px solid #f0f8ff;
+  border-radius: 8px;
+  padding: 0.1em 1.1em;
 }
 @media (max-width: 780px) {
   .markdown-body h3 {
