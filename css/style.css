@@ -472,10 +472,10 @@ button {
 .markdown-body h3 {
   font-size: 1.6rem;
   font-weight: 550;
-  background-color: #f5deb3;
-  border-left: 13px solid #deb887;
+  background-color: #e7e5e5;
+  border-left: 13px solid #7f7676;
   border-radius: 8px;
-  padding: 0.1em 1.1em;
+  padding: 0.07em 1.1em;
 }
 @media (max-width: 780px) {
   .markdown-body h3 {
@@ -2430,6 +2430,12 @@ pre .javascript .function {
   .article-content-container {
     padding: 18px;
     border-radius: 3px;
+  }
+}
+@media (max-width: 500px) {
+  .article-content-container {
+    padding: 1.2rem 0.7rem;
+    box-shadow: none;
   }
 }
 .article-content-container .article-title {

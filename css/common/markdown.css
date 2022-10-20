@@ -100,10 +100,10 @@ keep-tablet()
 .markdown-body h3 {
   font-size: 1.6rem;
   font-weight: 550;
-  background-color: #f5deb3;
-  border-left: 13px solid #deb887;
+  background-color: #e7e5e5;
+  border-left: 13px solid #7f7676;
   border-radius: 8px;
-  padding: 0.1em 1.1em;
+  padding: 0.07em 1.1em;
 keep-tablet()
 }
 .markdown-body h4 {
