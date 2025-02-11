@@ -104,4 +104,5 @@ deploy:
   type: git
   repo: https://github.com/taiwan-dentist/taiwan-dentist.github.io.git
   branch: gh-pages
+  token: ${{ secrets.GH_PAT }}
 
