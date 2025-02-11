@@ -32,6 +32,11 @@ jobs:
       - name: Generate Static Files
         run: hexo generate
 
+      - name: hexo deploy
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: hexo deploy
+
       - name: Deploy to GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
