@@ -24,12 +24,16 @@ jobs:
         run: |
           npm install hexo-cli -g
           npm install
+          npm install hexo-deployer-git --save
 
       - name: clean
         run: hexo clean
         
       - name: Generate Static Files
         run: hexo generate
+
+      - name: hexo deploy
+        run: hexo deploy
 
       - name: Deploy to GitHub Pages
         env:
