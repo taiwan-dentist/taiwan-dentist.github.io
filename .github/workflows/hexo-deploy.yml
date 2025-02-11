@@ -35,7 +35,10 @@ jobs:
       - name: hexo deploy
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: hexo deploy
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          hexo deploy
 
       - name: Deploy to GitHub Pages
         env:
