@@ -32,9 +32,6 @@ jobs:
       - name: Generate Static Files
         run: hexo generate
 
-      - name: hexo deploy
-        run: hexo deploy
-
       - name: Deploy to GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
@@ -43,4 +40,4 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
           git commit -m "Deploy to GitHub Pages"
-          git push -f https://x-access-token:${{ secrets.GH_PAT }}@github.com/taiwan-dentist/taiwan-dentist.github.io.git gh-pages
+          hexo deploy
