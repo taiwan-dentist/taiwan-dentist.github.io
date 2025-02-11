@@ -103,5 +103,5 @@ theme: fluid
 deploy:
   type: git
   repo: https://github.com/taiwan-dentist/taiwan-dentist.github.io.git
-  branch: main
+  branch: gh-pages
 
