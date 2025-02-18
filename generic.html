@@ -7,6 +7,75 @@
 		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<style>
+			/* 自定義 Swiper 樣式 */
+			.swiper-container {
+			  width: 100%;
+			  max-width: 100vh;
+			  margin: 0 auto;
+			  padding: 40px 0;
+			}
+			
+			.swiper-slide {
+			  text-align: center;
+			  background: #f8f8f8;
+			  border-radius: 8px;
+			  overflow: hidden;
+			  display: flex;
+      		  justify-content: center;
+      		  align-items: center;
+			  
+			  /* 使中心的 slide 靠近 */
+			  transform: scale(0.85);
+			  transition: transform 0.3s;
+			}
+			
+			.swiper-slide-active {
+			  transform: scale(1);
+			}
+			
+			.swiper-slide img {
+			  width: 100%;
+			  /* height: 400px; */
+			  object-fit: cover;
+			}
+			
+			.swiper-slide-content {
+			  padding: 20px;
+			}
+			
+			.swiper-button-next,
+			.swiper-button-prev {
+			  color: #333;
+			  background: rgba(255, 255, 255, 0.5);
+			  border-radius: 50%;
+			  width: 40px;
+			  height: 40px;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			}
+			
+			.swiper-button-next:after,
+			.swiper-button-prev:after {
+			  font-size: 16px;
+			  font-weight: bold;
+			}
+			
+			.swiper-pagination-bullet {
+			  width: 10px;
+			  height: 10px;
+			  background: #555;
+			  opacity: 0.5;
+			}
+			
+			.swiper-pagination-bullet-active {
+			  background: #939650;
+			  opacity: 1;
+			}
+		  </style>
+		
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -43,6 +112,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
+
 							<h1>草稿頁面</h1>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
 							<p>測試 <b>粗體</b>和 <strong>很粗體</strong>和<i>斜體</i> 和 <em>強調</em>
@@ -53,8 +123,49 @@
 							<h4>標題4</h4>
 							<hr />
 							<blockquote>名言語錄格式</blockquote>
-
 						</div>
+
+						 <!-- Swiper 輪播開始 -->
+						 <div class="swiper-container">
+							<div class="swiper swiper-main">
+							  <div class="swiper-wrapper">
+								<!-- 輪播項目 1 -->
+								<div class="swiper-slide">
+								  <img src="images\pic01.jpg" alt="Slide 1">
+								</div>
+								
+								<!-- 輪播項目 2 -->
+								<div class="swiper-slide">
+								  <img src="images\pic02.jpg" alt="Slide 2">
+								</div>
+								
+								<!-- 輪播項目 3 -->
+								<div class="swiper-slide">
+								  <img src="images\pic03.jpg" alt="Slide 3">
+								</div>
+								
+								<!-- 輪播項目 4 -->
+								<div class="swiper-slide">
+								  <img src="images\pic04.jpg" alt="Slide 4">
+								</div>
+								
+								<!-- 輪播項目 5 -->
+								<div class="swiper-slide">
+								  <img src="images\pic05.jpg" alt="Slide 5">
+								</div>
+							  </div>
+							  
+							  <!-- 分頁器 -->
+							  <div class="swiper-pagination"></div>
+							  
+							  <!-- 導航按鈕 -->
+							  <div class="swiper-button-next"></div>
+							  <div class="swiper-button-prev"></div>
+							</div>
+						  </div>
+						  <!-- Swiper 輪播結束 -->
+
+
 					</div>
 
 				<!-- Footer -->
@@ -75,12 +186,71 @@
 
 			</div>
 
+
+			<!-- 初始化 Swiper -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				var swiper = new Swiper('.swiper-main', {
+					// 基本設置
+					slidesPerView: 'auto',
+					centeredSlides: true,
+					spaceBetween: 30,
+					loop: true,
+					
+					// 自動播放
+					// autoplay: {
+					// delay: 3000,
+					// disableOnInteraction: false,
+					// },
+					
+					// 分頁器
+					pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					},
+					
+					// 導航按鈕
+					navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+					},
+					
+					// 淡入淡出效果
+					effect: 'coverflow',
+					coverflowEffect: {
+					rotate: 0,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: false,
+					},
+					
+					// 斷點設置（響應式）
+					breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 10
+					},
+					640: {
+						slidesPerView: 'auto',
+						spaceBetween: 20
+					},
+					1024: {
+						slidesPerView: 'auto',
+						spaceBetween: 30
+					}
+					}
+				});
+				});
+			</script>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 	</body>
 </html>
