@@ -2,7 +2,7 @@
 node_modules/
 
 # Ignore assets/sass folder
-assets/sass/
+# assets/sass/
 
 # Ignore all .log files
 *.log

@@ -7,7 +7,7 @@
 		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/swiper.css" />
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -163,35 +163,39 @@
 			<!-- Accordion.js -->
 			<script>
 				document.addEventListener('DOMContentLoaded', function() {
-					const accordionHeaders = document.querySelectorAll('.accordion-header');
-					
-					accordionHeaders.forEach(header => {
-						header.addEventListener('click', function() {
-							// 切換當前項目的狀態
-							const content = this.nextElementSibling;
-							const isActive = this.classList.contains('active');
-							
-							// 如果想要一次只能打開一個面板，取消註釋下面的代碼
-							/*
+				const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+				accordionHeaders.forEach(header => {
+					header.addEventListener('click', function() {
+						const content = this.nextElementSibling;
+						const isActive = this.classList.contains('active');
+
+						// 檢查點擊的標題是否已經是 "active" 狀態
+						if (isActive) {
+							// 如果是 "active" 狀態，表示使用者想要關閉它
+							this.classList.remove('active'); // 移除 header 的 "active" class
+							content.classList.remove('active'); // 移除 content 的 "active" class
+							content.style.maxHeight = null; // 關閉動畫效果
+						} else {
+							// 如果不是 "active" 狀態，表示使用者想要打開它
+
+							// 關閉所有其他的 accordion item
 							accordionHeaders.forEach(h => {
-								h.classList.remove('active');
-								h.nextElementSibling.classList.remove('active');
+								if (h !== this) { // 確保不要關閉目前點擊的 header
+									h.classList.remove('active'); // 移除其他 header 的 "active" class
+									h.nextElementSibling.classList.remove('active'); // 移除其他 content 的 "active" class
+									h.nextElementSibling.style.maxHeight = null; // 關閉其他 content 的動畫效果
+								}
 							});
-							*/
-							
-							// 切換當前面板
-							this.classList.toggle('active');
-							content.classList.toggle('active');
-							
-							// 可選：添加動畫效果
-							if (!isActive) {
-								content.style.maxHeight = content.scrollHeight + "px";
-							} else {
-								content.style.maxHeight = null;
-							}
-						});
+
+							// 開啟當前點擊的 accordion item
+							this.classList.add('active'); // 添加 header 的 "active" class
+							content.classList.add('active'); // 添加 content 的 "active" class
+							content.style.maxHeight = content.scrollHeight + "px"; // 開啟動畫效果
+						}
 					});
 				});
+			});
 			</script>
 		
 
