@@ -2314,12 +2314,12 @@ body.is-touch .tiles article .content {
 }
 
 .accordion-header:hover {
-  background-color: #f8f9fa;
+  background-color: #fafaf8;
 }
 
 .accordion-header.active {
   color: #524C33;
-  background-color: #F4F2EA;
+  background-color: #f9f7ed;
   font-size: larger;
 }
 
