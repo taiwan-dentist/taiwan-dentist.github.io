@@ -30,7 +30,8 @@
 				position: relative;
 				display: block;
 				width: 100%;
-				border-radius: _size(border-radius);
+				// border-radius: _size(border-radius);
+				border-radius: 13px;
 				overflow: hidden;
 
 				img {
