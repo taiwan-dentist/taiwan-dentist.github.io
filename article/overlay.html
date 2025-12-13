@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>嵌體(3D齒雕)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="../assets/css/swiper.css" />
+		<style>
+		.center-responsive-img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			height: auto;
+            width: 100%;
+		}
+		.img-row {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+		.img-row img {
+			max-width: 48%;
+			height: auto;
+			display: block;
+		}
+		@media (max-width: 800px) {
+			.img-row {
+				flex-direction: column;
+				gap: 1rem;
+			}
+			.img-row img {
+				max-width: 100%;
+			}
+		}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../index.html" class="logo">
+									<span class="symbol"><img src="../images/favicon.svg" alt="" /></span><span class="title">柏誠的牙科足跡履歷</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="../index.html">首頁 ． 案例解說</a></li>
+						<li><a href="../in-mind/">副頁 ． 執業隨筆</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<h1>嵌體(3D齒雕)案例解說</h1>
+							
+							<h3><strong>嵌體</strong>俗稱3D齒雕，是保存後牙齒質<b>最高極致</b>的修復後牙的方式。</h3>
+                            <p>跟傳統牙冠相比，它比較像半罩式安全帽，但保護牙齒避免斷裂的效果卻比傳統牙冠一樣(甚至更勝一籌)</p>
+							<p>要修磨、製作此類<b>特高精密度的假牙</b>需要<b>額外大量時間的進修與足夠臨床經驗</b>的醫師才能做得完善。</p>
+							<p><b>一個完美的3D齒雕應該要看起來與患者的牙齒會是嚴絲合縫的狀態，密合到幾乎看不出任何接隙存在的。</b></p>
+							<p>只有這樣嚴絲合縫的品質才能讓患者<b>使用長長久久、不粗糙刮舌、並且大幅避免未來齒質再次崩壞的機率。</b></p>
+							<!-- 單獨置中且自適應的第一張圖片 -->
+							<img src="./image-in-article/overlay/1.jpg" alt="" class="center-responsive-img" />
+							<br/>
+                            <img src="./image-in-article/overlay/2.jpg" alt="" class="center-responsive-img" />
+                            <br/>
+                            <img src="./image-in-article/overlay/3.jpg" alt="" class="center-responsive-img" />
+                            <br/>
+                            <img src="./image-in-article/overlay/4.jpg" alt="" class="center-responsive-img" />
+                            <br/>
+                            <img src="./image-in-article/overlay/5.jpg" alt="" class="center-responsive-img" />
+                            <br/>
+                            <img src="./image-in-article/overlay/6.jpg" alt="" class="center-responsive-img" />
+                            <br/>
+                            <img src="./image-in-article/overlay/7.jpg" alt="" class="center-responsive-img" />
+                            <br/>
+
+
+
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/daintydental" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://dainty-dental.com/" class="icon solid style2 fa-tooth"><span class="label">服務診所</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; 柏誠醫師 All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+
+
+			<!-- Accordion.js -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+				accordionHeaders.forEach(header => {
+					header.addEventListener('click', function() {
+						const content = this.nextElementSibling;
+						const isActive = this.classList.contains('active');
+
+						// 檢查點擊的標題是否已經是 "active" 狀態
+						if (isActive) {
+							// 如果是 "active" 狀態，表示使用者想要關閉它
+							this.classList.remove('active'); // 移除 header 的 "active" class
+							content.classList.remove('active'); // 移除 content 的 "active" class
+							content.style.maxHeight = null; // 關閉動畫效果
+						} else {
+							// 如果不是 "active" 狀態，表示使用者想要打開它
+
+							// 關閉所有其他的 accordion item
+							accordionHeaders.forEach(h => {
+								if (h !== this) { // 確保不要關閉目前點擊的 header
+									h.classList.remove('active'); // 移除其他 header 的 "active" class
+									h.nextElementSibling.classList.remove('active'); // 移除其他 content 的 "active" class
+									h.nextElementSibling.style.maxHeight = null; // 關閉其他 content 的動畫效果
+								}
+							});
+
+							// 開啟當前點擊的 accordion item
+							this.classList.add('active'); // 添加 header 的 "active" class
+							content.classList.add('active'); // 添加 content 的 "active" class
+							content.style.maxHeight = content.scrollHeight + "px"; // 開啟動畫效果
+						}
+					});
+				});
+			});
+			</script>
+		
+
+			<!-- 初始化 Swiper -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				var swiper = new Swiper('.swiper-main', {
+					// 基本設置
+					slidesPerView: 'auto',
+					centeredSlides: true,
+					spaceBetween: 30,
+					loop: true,
+					
+					// 自動播放
+					// autoplay: {
+					// delay: 3000,
+					// disableOnInteraction: false,
+					// },
+					
+					// 分頁器
+					pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					},
+					
+					// 導航按鈕
+					navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+					},
+					
+					// 淡入淡出效果
+					effect: 'coverflow',
+					coverflowEffect: {
+					rotate: 0,
+					stretch: 0,
+					depth: 100,
+					modifier: 1,
+					slideShadows: false,
+					},
+					
+					// 斷點設置（響應式）
+					breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 10
+					},
+					640: {
+						slidesPerView: 'auto',
+						spaceBetween: 20
+					},
+					1024: {
+						slidesPerView: 'auto',
+						spaceBetween: 30
+					}
+					}
+				});
+				});
+			</script>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+	</body>
+</html>
